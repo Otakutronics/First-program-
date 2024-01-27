@@ -1,0 +1,24 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main(){
+  int n;
+  cout<<"Enter the number of resistors :\t";
+  cin>>n;
+  string c ="ohms";
+  int *val= new int(n);
+  for(int i=0;i<n;i++){
+    cout<<"Enter value for resistor "<<i+1<<": ";cin>>val[i];
+    cout<<endl;
+  }
+  int sum=0;
+  cout<<"The values of resistors are:\n";
+  for(int i=0;i<n;i++){
+    cout<<"Resistor "<<i+1<<": "<<val[i]<<c;
+    sum+=val[i];
+    cout<<endl;
+  }
+  cout<<"The sum of the resistors are:   "<<sum<<" "<<c;
+  
+  return 0;
+}
